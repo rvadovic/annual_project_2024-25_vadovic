@@ -47,7 +47,6 @@ def hopso(cost_fn, hp, num_particles, runs, dimension,max_cut,e_min, vectors, ve
         gb_position[:] = global_best_position
         gb = []
 
-        # Initialize iteration counter
         iteration = 0
         # CALCULATE INITIAL ATTRACTORS
         if np.any(np.absolute(personal_best_positions-gb_position) > np.pi):
@@ -131,9 +130,7 @@ def hopso(cost_fn, hp, num_particles, runs, dimension,max_cut,e_min, vectors, ve
             velocity_magnitudes[iteration, :] = np.linalg.norm(particles_velocity, axis=1)
             gb.append(cost_fn(global_best_position))
 
-            # # Increment iteration counter
             iteration += 1
-
 
         gbest.append(gb)
         e_min.append(np.float64(cost_fn(global_best_position)))
@@ -141,14 +138,6 @@ def hopso(cost_fn, hp, num_particles, runs, dimension,max_cut,e_min, vectors, ve
         vel_mag.append(velocity_magnitudes)
 
         print(e_min)
-
-    # Save global best per run to a file
-    #with open(file_name, 'wb') as file:
-    #    pickle.dump(e_min, file)
-
-
-
-
 # ======== Run HOPSO =======
 # User Input Parameters: HOPSO
   # HOPSO/PSO hyperparameters--- c1, c2, tm, s (NOT LAMBDA) 
@@ -160,9 +149,6 @@ num_particles = 10          # Number of particles
 max_iterations = 500
 
 
-
-# ====== Data Collection =======
-# Data Collection Details
 e_min = []
 vectors = []
 velocities = []
@@ -171,4 +157,4 @@ gbest = []
 start_time = perf_counter()
 hopso(objective_function_1, hp, num_particles, 1, 6, maxcut, e_min, vectors, velocities, vel_mag, gbest, max_iterations, "hopso_result")
 end_time = perf_counter()
-print(str(end_time - start_time) + "s")
+print(str(end_time - start_time) + " s")
