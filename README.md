@@ -11,7 +11,7 @@ This project implemets HOPSO algorithm to find the ground-state energy of molecu
 
 ## Set
 
-In [run.py](src\hopso_variations\run.py) choose any of the imported HOPSO variations and set hyperparameters and other parameters
+In [run.py](https://github.com/rvadovic/annual_project_2024-25_vadovic/blob/5caa93b8bdc93f921386f20e30fd8c534ceb296a/src/hopso_variations/run.py) choose any of the imported HOPSO variations and set hyperparameters and other parameters
 
 ### Set hyperparameters
 
