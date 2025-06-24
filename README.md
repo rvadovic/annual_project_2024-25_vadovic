@@ -20,7 +20,7 @@ hp[1] - c2 - **social coefficient**, attraction towards swarm's best known posit
 hp[2] - tm - **time multiplier**, controls the rate at which time `t` evolves for each particle  
 hp[3] - lambda - **damping coefficient**, controls how fast the amplitude `A` decays over time `t`  
 
-maxcut - smallest possible amplitude A
+maxcut - smallest possible amplitude `A`
 
 ## Run
 
